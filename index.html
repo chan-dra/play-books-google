@@ -23,101 +23,61 @@
         <![endif]-->
     </head>
     <body>
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="container branding-header">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">My books</a>
-        </div>
+      <div id="main">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container branding-header">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">My books</a>
+            </div>
+          </div>
+          <div class="container">
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li><a href="#">El Pooch</a></li>
+                  <li><a href="#">The Flight</a></li>
+                  <li><a href="#">Top 10 Australian Beaches</a></li>
+              </ul>
+            </div><!--/.navbar-collapse -->
+          </div>
+        </nav>
+
+        <div class="container">
+          <div class="container">
+            <div id="cards" class="row">
+            </div><!--/row-->
+          </div><!--/container -->
+          <hr>
+          <footer>
+          </footer>
+        </div> <!-- /container -->
       </div>
-      <div class="container">
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-              <li><a href="#">El Pooch</a></li>
-              <li><a href="#">The Flight</a></li>
-              <li><a href="#">Top 10 Australian Beaches</a></li>
-          </ul>
-        </div><!--/.navbar-collapse -->
+
+      <div id="newBook" class="container hidden">
+        <h2>Book details</h2>
+        <form role="form">
+          <div class="form-group">
+            <label for="name">Book Name:</label>
+            <input type="text" class="form-control" name="name" placeholder="Ex: The Alchemist" required>
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control" name="author" placeholder="Paulo Chelho" required>
+          </div>
+          <button id="addNewBook" type="submit" class="btn btn-default">Submit</button>
+        </form>
       </div>
-    </nav>
 
-    <div class="container">
-      <div class="container">
-          <div class="row">
-            <div class="col-xs-10 col-sm-6 col-md-3">
-              <div class="panel panel-default">
-                <div class="panel-body caption">
-                  <h3>Welcome back!</h3>
-                  <p>Its been a while</p>
-                  <p>Read any new books lately?</p>
-                </div>
-                <div class="panel-footer">
-                  <a href="#">No</a>
-                  <a class="a-primary" href="#">Yes</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-10 col-sm-6 col-md-3">
-              <div class="panel panel-default">
-                <div class="panel-thumbnail img-overlay">
-                  <img src="http:&#x2F;&#x2F;placehold.it&#x2F;560x300&#x2F;2222CC&#x2F;EEE"class="img-responsive">
-                  <p class="post-content">Top 10 Australian Beaches</p>
-                </div>
-                <div class="panel-body caption">
-                  <p>Some kind of descripion, some kind of description</p>
-                </div>
-                <div class="panel-footer">
-                  <a href="#">No</a>
-                  <a class="a-primary" href="#">Yes</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-10 col-sm-6 col-md-4">
-              <div class="panel panel-default">
-                <img src="http:&#x2F;&#x2F;placehold.it&#x2F;100x165&#x2F;2222CC&#x2F;EEE" class="img-responsive img-float-left">
-                <div class="panel-body caption no-bottom-padding">
-                  <h3>El Pooch</h3>
-                  <p>by Alex Nelson</p>
-                </div>
-                <div class="panel-footer">
-                  <a href="/1/freeSample">Free sample</a>
-                  <a class="a-primary" href="/1/review">Review</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-10 col-sm-6 col-md-4">
-              <div class="panel panel-default">
-                <img src="http:&#x2F;&#x2F;placehold.it&#x2F;100x165&#x2F;2222CC&#x2F;EEE" class="img-responsive img-float-left">
-                <div class="panel-body caption no-bottom-padding">
-                  <h3>The Flight</h3>
-                  <p>by Scott Masterson</p>
-                </div>
-                <div class="panel-footer">
-                  <a href="/2/freeSample">Free sample</a>
-                  <a class="a-primary" href="/2/review">Review</a>
-                </div>
-              </div>
-            </div>
 
-        </div><!--/row-->
-      </div><!--/container -->
-
-      <hr>
-
-      <footer>
-      </footer>
-    </div> <!-- /container -->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+      <script src="js/vendor/bootstrap.min.js"></script>
+      <script src="js/vendor/mustache.js"></script>
+      <script src="js/main.js"></script>
     </body>
 </html>
